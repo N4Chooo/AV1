@@ -1,5 +1,11 @@
 <?php 
-
+if (isset($_GET['won'])){
+   if($_GET['won'] == 1){
+    echo "Has ganado";
+   }else{
+    echo "Has perdido";
+   }
+}
 
 
 

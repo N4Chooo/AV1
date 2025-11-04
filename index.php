@@ -86,11 +86,11 @@ $remaining = $MAX_ATTEMPTS - count($_SESSION['attempts']);
   <?php else: ?>
     <div class="result">
       <?php if ($won): ?>
-        <?= header("Location: resultado.php")?>
+        <?= header("Location: resultado.php?won=1")?>
 
       <?php else: ?>
-        
-        <?= header("Location: resultado.php")?>
+
+        <?= header("Location: resultado.php?won=0")?>
 
       <?php endif; ?>
       <p><a href="?reset=1"><button>Jugar otra vez</button></a></p>
