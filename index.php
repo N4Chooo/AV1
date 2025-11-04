@@ -75,7 +75,12 @@ $remaining = $MAX_ATTEMPTS - count($_SESSION['attempts']);
     border-radius: 100px
   }
 
-
+  h2{
+    color : blue;
+  }
+  button{
+    border-radius: 100px
+  }
 
 </style>
 <body>
