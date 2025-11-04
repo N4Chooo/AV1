@@ -56,7 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$finished) {
         } elseif (count($_SESSION['attempts']) >= $MAX_ATTEMPTS) {
             $_SESSION['finished'] = true;
         }
-
         header("Location: index.php");
         exit;
     }
@@ -87,9 +86,12 @@ $remaining = $MAX_ATTEMPTS - count($_SESSION['attempts']);
   <?php else: ?>
     <div class="result">
       <?php if ($won): ?>
-        <h3>🎉 ¡Correcto! El número era <?= htmlspecialchars($secret) ?>.</h3>
+        <?= header("Location: resultado.php")?>
+
       <?php else: ?>
-        <h3>❌ Sin intentos. El número era <?= htmlspecialchars($secret) ?>.</h3>
+        
+        <?= header("Location: resultado.php")?>
+
       <?php endif; ?>
       <p><a href="?reset=1"><button>Jugar otra vez</button></a></p>
     </div>
